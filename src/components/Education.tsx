@@ -181,13 +181,22 @@ const Education = () => {
                     <p className="text-muted-foreground text-sm mb-2">{cert.date}</p>
                     <div className="space-y-2">
                       {cert.issuer === "Oracle" && (
-                        <button
-                          onClick={() => window.open(eCertificate, '_blank')}
-                          className="mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-2 mx-auto"
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          View Certificate
-                        </button>
+                        <>
+                          <button
+                            onClick={() => window.open(eCertificate, '_blank')}
+                            className="mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-2 mx-auto"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            View Certificate
+                          </button>
+                          <button
+                            onClick={() => window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=F54BA623462CABB99A1CB3C79C853C7347ECA2D896ED5CD50ACA6191807B3E71', '_blank')}
+                            className="mt-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm font-medium hover:bg-secondary/90 transition-colors flex items-center gap-2 mx-auto"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            View Credential
+                          </button>
+                        </>
                       )}
                     </div>
                   </div>
