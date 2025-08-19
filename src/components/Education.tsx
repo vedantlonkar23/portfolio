@@ -2,7 +2,9 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Calendar, MapPin, Award, ExternalLink } from "lucide-react";
 import oracleBadge from "@/assets/ai badge.png";
+import genAIBadge from "@/assets/genaiprofessionalbadge.png";
 import eCertificate from "@/assets/eCertificate.pdf";
+import genAICertificate from "@/assets/genai professional.pdf";
 
 const Education = () => {
   const education = [
@@ -74,11 +76,22 @@ const Education = () => {
 
   const certifications = [
     {
-      title: "Oracle Database Certification",
+      title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
       issuer: "Oracle",
       date: "2025",
-      credentialId: "ORACLE-DB-CERT",
-      badge: "Oracle Certified"
+      credentialId: "ORACLE-GENAI-PROF",
+      badge: "Oracle Gen AI Professional",
+      credentialUrl: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=F3301F76A525A30825AC1E578B3C19AF34C8C63A6A93AEC1AEFBB6FB12F4AB56",
+      certificateFile: genAICertificate
+    },
+    {
+      title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+      issuer: "Oracle",
+      date: "2025",
+      credentialId: "ORACLE-AI-FOUNDATIONS",
+      badge: "Oracle AI Foundations",
+      credentialUrl: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=F54BA623462CABB99A1CB3C79C853C7347ECA2D896ED5CD50ACA6191807B3E71",
+      certificateFile: eCertificate
     }
   ];
 
@@ -159,15 +172,15 @@ const Education = () => {
           {/* Certifications */}
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-6 text-center">Certifications & Online Learning</h3>
-            <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-items-center">
               {certifications.map((cert, index) => (
-                <Card key={index} className="p-6 gradient-card border-border/50 hover:shadow-elegant transition-all duration-300 hover:scale-105 transform">
+                <Card key={index} className="p-6 gradient-card border-border/50 hover:shadow-elegant transition-all duration-300 hover:scale-105 transform w-full max-w-sm">
                   <div className="text-center">
                     {cert.issuer === "Oracle" ? (
                       <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                         <img 
-                          src={oracleBadge} 
-                          alt="Oracle Badge" 
+                          src={cert.badge === "Oracle Gen AI Professional" ? genAIBadge : oracleBadge} 
+                          alt={`${cert.badge} Badge`} 
                           className="w-full h-full object-contain"
                         />
                       </div>
@@ -176,21 +189,21 @@ const Education = () => {
                         <Award className="w-8 h-8" />
                       </div>
                     )}
-                    <h4 className="font-semibold mb-2">{cert.title}</h4>
+                    <h4 className="font-semibold mb-2 text-sm">{cert.title}</h4>
                     <p className="text-primary font-medium mb-1">{cert.issuer}</p>
                     <p className="text-muted-foreground text-sm mb-2">{cert.date}</p>
                     <div className="space-y-2">
                       {cert.issuer === "Oracle" && (
                         <>
                           <button
-                            onClick={() => window.open(eCertificate, '_blank')}
+                            onClick={() => window.open(cert.certificateFile, '_blank')}
                             className="mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors flex items-center gap-2 mx-auto"
                           >
                             <ExternalLink className="w-4 h-4" />
                             View Certificate
                           </button>
                           <button
-                            onClick={() => window.open('https://catalog-education.oracle.com/ords/certview/sharebadge?id=F54BA623462CABB99A1CB3C79C853C7347ECA2D896ED5CD50ACA6191807B3E71', '_blank')}
+                            onClick={() => window.open(cert.credentialUrl, '_blank')}
                             className="mt-2 px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm font-medium hover:bg-secondary/90 transition-colors flex items-center gap-2 mx-auto"
                           >
                             <ExternalLink className="w-4 h-4" />
