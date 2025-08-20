@@ -21,6 +21,7 @@ const Header = () => {
     { href: "#achievements", label: "Achievements" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#powerbi", label: "Power BI" },
     { href: "#contact", label: "Contact" },
     { href: "#hobbies", label: "Hobbies" },
   ];

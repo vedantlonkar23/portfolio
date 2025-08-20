@@ -6,6 +6,7 @@ import Education from "@/components/Education";
 import Achievements from "@/components/Achievements";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import PowerBI from "@/components/PowerBI";
 import Contact from "@/components/Contact";
 import Hobbies from "@/components/Hobbies";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ const Index = () => {
         <Achievements />
         <Skills />
         <Projects />
+        <PowerBI />
         <Contact />
         <Hobbies />
       </main>
