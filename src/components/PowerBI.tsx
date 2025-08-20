@@ -16,7 +16,7 @@ const PowerBI = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Power BI Dashboards</h2>
           <ul className="list-disc list-inside text-2xl font-semibold text-muted-foreground max-w-3xl mx-auto inline-block text-left">
-            <li>telecom company churn rate</li>
+            <li>Telecom Company Churn Rate</li>
           </ul>
         </div>
 
