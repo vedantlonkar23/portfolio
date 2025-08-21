@@ -46,12 +46,7 @@ const PowerBI = () => {
         {/* Details Panel */}
         <div className="max-w-4xl mx-auto mt-10">
           <Card className="p-8 border-border/50 bg-background/60 backdrop-blur-sm">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <Badge variant="secondary">Telecom</Badge>
-              <Badge variant="secondary">Churn</Badge>
-              <Badge variant="secondary">Retention</Badge>
-              <Badge variant="secondary">Power BI</Badge>
-            </div>
+            
 
             <div className="grid gap-8 md:grid-cols-2">
               <div>
