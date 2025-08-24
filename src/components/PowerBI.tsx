@@ -128,7 +128,7 @@ const PowerBI = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold mb-3">Recommendations</h3>
+                    <h3 className="text-xl font-semibold mb-3">Recommended actions</h3>
                     <ul className="space-y-2 text-muted-foreground">
                       <li>Optimize shipment routing to reduce delays caused by traffic detours and heavy congestion.</li>
                       <li>Improve inventory planning to better match demand and reduce excess stock.</li>
