@@ -17,13 +17,8 @@ const Header = () => {
   const navItems = [
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
-    { href: "#education", label: "Education" },
-    { href: "#achievements", label: "Achievements" },
-    { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
-    { href: "#powerbi", label: "Power BI" },
     { href: "#contact", label: "Contact" },
-    { href: "#hobbies", label: "Hobbies" },
   ];
 
   const scrollToSection = (href: string) => {
